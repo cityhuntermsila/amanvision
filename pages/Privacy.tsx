@@ -4,14 +4,14 @@ import { ShieldCheck, Lock, EyeOff } from 'lucide-react';
 
 const Privacy: React.FC = () => {
   return (
-    <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 py-20 bg-white">
+    <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 py-10 bg-white">
       <div className="max-w-4xl mx-auto px-4">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center justify-center w-20 h-20 bg-blue-50 rounded-full mb-6">
-            <Lock className="w-10 h-10 text-blue-600" />
+        <div className="text-center mb-10">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-50 rounded-full mb-4">
+            <Lock className="w-8 h-8 text-blue-600" />
           </div>
-          <h1 className="text-4xl lg:text-5xl font-black text-slate-900 mb-4">Politique de Confidentialité</h1>
-          <p className="text-xl text-slate-600 font-medium italic">Votre vie privée est le pilier de notre vigilance AmanVision.</p>
+          <h1 className="text-3xl lg:text-4xl font-black text-slate-900 mb-2">Politique de Confidentialité</h1>
+          <p className="text-lg text-slate-600 font-medium italic">Votre vie privée est le pilier de notre vigilance AmanVision.</p>
         </div>
 
         <div className="prose prose-blue max-w-none text-slate-700 space-y-10">

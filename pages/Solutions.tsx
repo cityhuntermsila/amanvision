@@ -7,9 +7,9 @@ const Solutions: React.FC = () => {
   return (
     <div className="animate-in fade-in slide-in-from-right-4 duration-500">
       {/* Intro Section */}
-      <section className="pt-24 pb-12 bg-white">
+      <section className="pt-16 pb-8 bg-white">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <p className="max-w-4xl mx-auto text-slate-500 font-medium leading-relaxed mb-12">
+          <p className="max-w-4xl mx-auto text-slate-500 font-medium leading-relaxed mb-8">
             AmanVision déploie la puissance de l'IA pour sécuriser les environnements là où la présence humaine ne suffit plus. De l'intimité d'un EHPAD au tumulte d'une gare, nous veillons sur chaque chute.
           </p>
           <h1 className="heading-xl px-4">Solutions Fall-Detection & IA <br />Multi-Secteurs.</h1>
@@ -17,19 +17,19 @@ const Solutions: React.FC = () => {
       </section>
 
       {/* Grid des Solutions */}
-      <section className="py-24 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid lg:grid-cols-3 gap-12">
+          <div className="grid lg:grid-cols-3 gap-8">
             {FEATURES.map((feature, idx) => (
-              <div key={idx} className="bg-slate-50 rounded-[3.5rem] p-8 lg:p-10 space-y-8 border border-slate-100 group hover:bg-white hover:shadow-2xl transition-all flex flex-col items-center lg:items-start text-center lg:text-left">
-                <div className="w-16 h-16 bg-[#601344] rounded-2xl flex items-center justify-center text-white shadow-lg">
+              <div key={idx} className="bg-slate-50 rounded-[2.5rem] p-6 lg:p-8 space-y-6 border border-slate-100 group hover:bg-white hover:shadow-2xl transition-all flex flex-col items-center lg:items-start text-center lg:text-left">
+                <div className="w-14 h-14 bg-[#601344] rounded-2xl flex items-center justify-center text-white shadow-lg">
                   {feature.icon}
                 </div>
-                <h3 className="text-2xl lg:text-3xl font-extrabold text-[#601344] tracking-tight">{feature.title}</h3>
-                <p className="text-slate-500 font-medium leading-relaxed lg:h-20">
+                <h3 className="text-xl lg:text-2xl font-extrabold text-[#601344] tracking-tight">{feature.title}</h3>
+                <p className="text-slate-500 font-medium leading-relaxed lg:h-16">
                   {feature.description}
                 </p>
-                <div className="w-full aspect-square lg:aspect-video bg-white rounded-3xl overflow-hidden flex items-center justify-center border border-slate-100 group-hover:border-[#601344]/10 transition-colors">
+                <div className="w-full aspect-square lg:aspect-video bg-white rounded-2xl overflow-hidden flex items-center justify-center border border-slate-100 group-hover:border-[#601344]/10 transition-colors">
                   <img
                     src={feature.image}
                     alt={feature.title}
@@ -43,18 +43,18 @@ const Solutions: React.FC = () => {
       </section>
 
       {/* Main Process Section (From HowItWorks) */}
-      <section className="py-32 bg-slate-50">
+      <section className="py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-20 text-[#601344]">
-            <h2 className="text-4xl lg:text-5xl font-black tracking-tighter">Notre Processus de Détection</h2>
+          <div className="text-center mb-10 text-[#601344]">
+            <h2 className="text-3xl lg:text-4xl font-black tracking-tighter">Notre Processus de Détection</h2>
           </div>
-          <div className="grid lg:grid-cols-4 gap-12 relative">
-            <div className="hidden lg:block absolute top-24 left-1/2 -translate-x-1/2 w-[80%] h-1 bg-gradient-to-r from-[#0077C8] via-[#601344] to-[#601344] opacity-20"></div>
+          <div className="grid lg:grid-cols-4 gap-8 relative">
+            <div className="hidden lg:block absolute top-16 left-1/2 -translate-x-1/2 w-[80%] h-1 bg-gradient-to-r from-[#0077C8] via-[#601344] to-[#601344] opacity-20"></div>
 
             {HOW_IT_WORKS_STEPS.map((step, idx) => (
-              <div key={idx} className="relative z-10 flex flex-col items-center text-center space-y-8 group">
-                <div className={`${step.color} w-32 h-32 rounded-[2.5rem] flex items-center justify-center text-white shadow-2xl group-hover:scale-110 transition-transform duration-500 relative`}>
-                  <div className="absolute -top-4 -right-4 bg-[#601344] text-white w-12 h-12 rounded-full flex items-center justify-center font-black border-4 border-white">
+              <div key={idx} className="relative z-10 flex flex-col items-center text-center space-y-6 group">
+                <div className={`${step.color} w-24 h-24 rounded-[2rem] flex items-center justify-center text-white shadow-2xl group-hover:scale-110 transition-transform duration-500 relative`}>
+                  <div className="absolute -top-3 -right-3 bg-[#601344] text-white w-10 h-10 rounded-full flex items-center justify-center font-black border-4 border-white">
                     0{idx + 1}
                   </div>
                   {step.icon}
@@ -70,12 +70,12 @@ const Solutions: React.FC = () => {
       </section>
 
       {/* Case Study: Espaces Publics */}
-      <section className="py-24 bg-[#601344] text-white">
+      <section className="py-12 bg-[#601344] text-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="bg-white/5 rounded-[4rem] p-10 lg:p-24 border border-white/10 lg:flex lg:items-center lg:gap-20 text-center lg:text-left">
-            <div className="lg:w-1/2 space-y-8 flex flex-col items-center lg:items-start">
-              <h2 className="text-4xl lg:text-6xl font-black tracking-tighter leading-none">Smart Gare & <br /><span className="text-[#0077C8]">Smart Mall</span>.</h2>
-              <p className="text-lg lg:text-xl text-rose-100/70 font-medium">
+          <div className="bg-white/5 rounded-[3rem] p-8 lg:p-16 border border-white/10 lg:flex lg:items-center lg:gap-12 text-center lg:text-left">
+            <div className="lg:w-1/2 space-y-6 flex flex-col items-center lg:items-start">
+              <h2 className="text-3xl lg:text-5xl font-black tracking-tighter leading-none">Smart Gare & <br /><span className="text-[#0077C8]">Smart Mall</span>.</h2>
+              <p className="text-base lg:text-lg text-rose-100/70 font-medium">
                 Dans les ERP (Établissements Recevant du Public), une chute peut entraîner des blessures graves et des mouvements de panique.
                 AmanVision détecte les incidents dans les zones critiques :
               </p>
@@ -112,18 +112,18 @@ const Solutions: React.FC = () => {
       </section>
 
       {/* Hardware Stack Section (From HowItWorks) */}
-      <section className="py-24 bg-slate-50 overflow-hidden">
+      <section className="py-12 bg-slate-50 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="bg-white rounded-[4rem] p-12 lg:p-24 shadow-2xl border border-slate-100 lg:flex lg:items-center lg:gap-24 relative">
+          <div className="bg-white rounded-[3rem] p-8 lg:p-16 shadow-2xl border border-slate-100 lg:flex lg:items-center lg:gap-16 relative">
             <div className="absolute top-0 left-0 w-full h-2 bg-[#601344]"></div>
-            <div className="lg:w-1/2 space-y-10 relative z-10">
-              <div className="bg-[#601344] inline-block p-4 rounded-3xl shadow-xl">
-                <Server className="w-12 h-12 text-white" />
+            <div className="lg:w-1/2 space-y-8 relative z-10">
+              <div className="bg-[#601344] inline-block p-3 rounded-2xl shadow-xl">
+                <Server className="w-10 h-10 text-white" />
               </div>
-              <h2 className="text-4xl lg:text-6xl font-black text-slate-900 tracking-tighter leading-none">
+              <h2 className="text-3xl lg:text-5xl font-black text-slate-900 tracking-tighter leading-none">
                 Stack Technologique <br /><span className="text-[#601344] italic">Certifiée</span>.
               </h2>
-              <p className="text-xl text-slate-500 font-bold leading-relaxed">
+              <p className="text-lg text-slate-500 font-bold leading-relaxed">
                 AmanVision s'appuie sur les leaders mondiaux du hardware pour garantir une puissance de calcul stable et sécurisée.
               </p>
 
@@ -154,49 +154,49 @@ const Solutions: React.FC = () => {
       </section>
 
       {/* Technology Focus (From HowItWorks) */}
-      <section className="py-24 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl lg:text-5xl font-black text-slate-900 tracking-tighter">Entraîné pour la <span className="text-[#601344]">Rigueur</span>.</h2>
+          <div className="text-center mb-10">
+            <h2 className="text-3xl lg:text-4xl font-black text-slate-900 tracking-tighter">Entraîné pour la <span className="text-[#601344]">Rigueur</span>.</h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="p-10 bg-slate-50 rounded-[3rem] space-y-6 hover:bg-[#601344] hover:text-white transition-all group border border-slate-100">
-              <Zap className="w-12 h-12 text-[#0077C8] group-hover:text-rose-400" />
-              <h4 className="text-2xl font-black">Analyse Posturale</h4>
-              <p className="opacity-70 font-bold">Extraction instantanée des points clés du corps pour identifier les anomalies biomécaniques.</p>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="p-8 bg-slate-50 rounded-[2rem] space-y-4 hover:bg-[#601344] hover:text-white transition-all group border border-slate-100">
+              <Zap className="w-10 h-10 text-[#0077C8] group-hover:text-rose-400" />
+              <h4 className="text-xl font-black">Analyse Posturale</h4>
+              <p className="opacity-70 font-bold text-sm">Extraction instantanée des points clés du corps pour identifier les anomalies biomécaniques.</p>
             </div>
-            <div className="p-10 bg-slate-50 rounded-[3rem] space-y-6 hover:bg-[#601344] hover:text-white transition-all group border border-slate-100">
-              <Activity className="w-12 h-12 text-[#0077C8] group-hover:text-rose-400" />
-              <h4 className="text-2xl font-black">Reconnaissance Anonyme</h4>
-              <p className="opacity-70 font-bold">Traitement des formes et patterns sans capturer l'identité visuelle, conforme RGPD par design.</p>
+            <div className="p-8 bg-slate-50 rounded-[2rem] space-y-4 hover:bg-[#601344] hover:text-white transition-all group border border-slate-100">
+              <Activity className="w-10 h-10 text-[#0077C8] group-hover:text-rose-400" />
+              <h4 className="text-xl font-black">Reconnaissance Anonyme</h4>
+              <p className="opacity-70 font-bold text-sm">Traitement des formes et patterns sans capturer l'identité visuelle, conforme RGPD par design.</p>
             </div>
-            <div className="p-10 bg-slate-50 rounded-[3rem] space-y-6 hover:bg-[#601344] hover:text-white transition-all group border border-slate-100">
-              <Database className="w-12 h-12 text-[#0077C8] group-hover:text-rose-400" />
-              <h4 className="text-2xl font-black">Zero-Storage</h4>
-              <p className="opacity-70 font-bold">Flux analysés en mémoire vive et immédiatement purgés après détection pour une sécurité maximale.</p>
+            <div className="p-8 bg-slate-50 rounded-[2rem] space-y-4 hover:bg-[#601344] hover:text-white transition-all group border border-slate-100">
+              <Database className="w-10 h-10 text-[#0077C8] group-hover:text-rose-400" />
+              <h4 className="text-xl font-black">Zero-Storage</h4>
+              <p className="opacity-70 font-bold text-sm">Flux analysés en mémoire vive et immédiatement purgés après détection pour une sécurité maximale.</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Architecture Section */}
-      <section className="py-24 bg-slate-50">
+      <section className="py-12 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16 lg:mb-20 space-y-4">
-            <h2 className="text-4xl lg:text-5xl font-black text-[#601344] tracking-tighter px-2">Infrastructure Multi-Flux</h2>
-            <p className="text-slate-500 font-medium max-w-2xl mx-auto px-4">
+          <div className="text-center mb-10 lg:mb-14 space-y-4">
+            <h2 className="text-3xl lg:text-4xl font-black text-[#601344] tracking-tighter px-2">Infrastructure Multi-Flux</h2>
+            <p className="text-slate-500 font-medium max-w-2xl mx-auto px-4 text-sm">
               Une architecture robuste capable de traiter des centaines de caméras en simultané avec une latence quasi-nulle.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8 lg:gap-10">
+          <div className="grid lg:grid-cols-3 gap-6 lg:gap-8">
             {ARCHITECTURE.map((item, idx) => (
-              <div key={idx} className="bg-white border border-slate-100 p-10 lg:p-12 rounded-[3.5rem] space-y-6 lg:space-y-8 hover:bg-[#601344] hover:text-white hover:shadow-2xl transition-all group text-center flex flex-col items-center">
-                <div className="w-20 h-20 bg-[#601344] rounded-full flex items-center justify-center shadow-lg mb-4 group-hover:bg-[#0077C8] transition-colors">
-                  {React.cloneElement(item.icon as React.ReactElement, { size: 40, className: "text-white" })}
+              <div key={idx} className="bg-white border border-slate-100 p-8 lg:p-10 rounded-[2.5rem] space-y-4 lg:space-y-6 hover:bg-[#601344] hover:text-white hover:shadow-2xl transition-all group text-center flex flex-col items-center">
+                <div className="w-16 h-16 bg-[#601344] rounded-full flex items-center justify-center shadow-lg mb-2 group-hover:bg-[#0077C8] transition-colors">
+                  {React.cloneElement(item.icon as React.ReactElement, { size: 32, className: "text-white" })}
                 </div>
-                <h4 className="text-2xl font-extrabold text-[#601344] group-hover:text-white">{item.title}</h4>
-                <p className="text-slate-500 font-medium leading-relaxed group-hover:text-white/80">
+                <h4 className="text-xl font-extrabold text-[#601344] group-hover:text-white">{item.title}</h4>
+                <p className="text-slate-500 font-medium leading-relaxed group-hover:text-white/80 text-sm">
                   {item.description}
                 </p>
               </div>

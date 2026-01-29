@@ -8,9 +8,9 @@ interface FooterProps {
 
 const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   return (
-    <footer className="bg-[#4a0e34] text-white py-20 border-t border-[#601344]">
+    <footer className="bg-[#4a0e34] text-white py-12 border-t border-[#601344]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-4 gap-12">
+        <div className="grid md:grid-cols-4 gap-8">
           <div className="space-y-6">
             <div className="flex items-center gap-3">
               <div className="bg-white p-2 rounded-xl">
@@ -57,7 +57,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             </div>
           </div>
         </div>
-        <div className="border-t border-white/5 mt-16 pt-8 text-center text-rose-100/20 text-[10px] font-black tracking-[0.3em] uppercase">
+        <div className="border-t border-white/5 mt-10 pt-6 text-center text-rose-100/20 text-[10px] font-black tracking-[0.3em] uppercase">
           &copy; {new Date().getFullYear()} AmanVision AI. Tous droits réservés.
         </div>
       </div>

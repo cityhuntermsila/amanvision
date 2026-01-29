@@ -25,8 +25,8 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled
-      ? 'bg-white/95 backdrop-blur-xl border-b border-slate-100 py-3 shadow-medical'
-      : 'bg-transparent py-6'
+      ? 'bg-white/95 backdrop-blur-xl border-b border-slate-100 py-2 shadow-medical'
+      : 'bg-transparent py-4'
       }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
@@ -35,7 +35,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
             onClick={() => onNavigate('home')}
           >
             <div className="bg-white p-1 rounded-2xl shadow-lg transition-transform group-hover:scale-105">
-              <img src="/images/logo.png" alt="AmanVision Logo" className="w-10 h-10 object-contain" />
+              <img src="/images/logo.png" alt="AmanVision Logo" className="w-8 h-8 object-contain" />
             </div>
             <span className="text-2xl font-extrabold tracking-tighter text-[#601344]">
               Aman<span className="text-[#0077C8]">Vision</span>
@@ -62,7 +62,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
             <div className="w-6"></div>
             <button
               onClick={() => onNavigate('demo')}
-              className="bg-[#0077C8] hover:bg-[#601344] text-white px-8 py-3.5 rounded-full font-extrabold transition-all shadow-lg active:scale-95 flex items-center gap-2 text-sm"
+              className="bg-[#0077C8] hover:bg-[#601344] text-white px-6 py-2.5 rounded-full font-extrabold transition-all shadow-lg active:scale-95 flex items-center gap-2 text-sm"
             >
               Demo Live
               <ChevronRight className="w-4 h-4" />

@@ -40,7 +40,7 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen bg-slate-50 selection:bg-emerald-100 selection:text-emerald-900 flex flex-col">
       <Navbar currentPage={currentPage} onNavigate={setCurrentPage} />
-      <main className="flex-grow pt-20">
+      <main className="flex-grow pt-14">
         {renderPage()}
       </main>
       <Footer onNavigate={setCurrentPage} />

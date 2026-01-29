@@ -4,17 +4,17 @@ import { FileText, Gavel, Scale } from 'lucide-react';
 
 const Terms: React.FC = () => {
   return (
-    <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 py-20 bg-slate-50">
+    <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 py-10 bg-slate-50">
       <div className="max-w-4xl mx-auto px-4">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center justify-center w-20 h-20 bg-slate-200 rounded-full mb-6">
-            <FileText className="w-10 h-10 text-slate-700" />
+        <div className="text-center mb-10">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-slate-200 rounded-full mb-4">
+            <FileText className="w-8 h-8 text-slate-700" />
           </div>
-          <h1 className="text-4xl lg:text-5xl font-black text-slate-900 mb-4">Conditions Générales</h1>
-          <p className="text-xl text-slate-600 font-medium italic">Cadre légal des services AmanVision.</p>
+          <h1 className="text-3xl lg:text-4xl font-black text-slate-900 mb-2">Conditions Générales</h1>
+          <p className="text-lg text-slate-600 font-medium italic">Cadre légal des services AmanVision.</p>
         </div>
 
-        <div className="bg-white p-10 md:p-16 rounded-[3rem] shadow-xl border border-slate-100 space-y-12 text-slate-700">
+        <div className="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-xl border border-slate-100 space-y-10 text-slate-700">
           <section className="space-y-4">
             <h2 className="text-2xl font-black text-slate-900 flex items-center gap-3">
               <Scale className="w-6 h-6 text-blue-600" />
