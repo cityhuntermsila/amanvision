@@ -1,0 +1,26 @@
+{
+    "solutions_page": {
+        "intro_text": "AmanVision deploys the power of AI to secure environments where human presence is no longer enough. From the privacy of a nursing home to the bustle of a station, we watch over every fall.",
+        "intro_title": "Fall-Detection & Multi-Sector AI Solutions.",
+        "process_title": "Our Detection Process",
+        "smart_gare_title": "Smart Station & Smart Mall.",
+        "smart_gare_desc": "In public buildings (ERP), a fall can lead to serious injuries and panic movements. AmanVision detects incidents in critical areas:",
+        "smart_gare_feat1": "Escalators and moving walkways",
+        "smart_gare_feat2": "Transit halls and storage areas",
+        "smart_gare_feat3": "Prohibited security perimeters",
+        "smart_gare_btn": "Request an ERP Audit",
+        "tech_stack_badge": "Certified",
+        "tech_stack_title": "Technology Stack",
+        "tech_stack_desc": "AmanVision relies on world leaders in hardware to ensure stable and secure computing power.",
+        "rigueur_title_part1": "Trained for",
+        "rigueur_title_part2": "Rigor",
+        "rigueur_feat1_title": "Postural Analysis",
+        "rigueur_feat1_desc": "Instant extraction of key body points to identify biomechanical anomalies.",
+        "rigueur_feat2_title": "Anonymous Recognition",
+        "rigueur_feat2_desc": "Processing of shapes and patterns without capturing visual identity, GDPR compliant by design.",
+        "rigueur_feat3_title": "Zero-Storage",
+        "rigueur_feat3_desc": "Feeds analyzed in RAM and immediately purged after detection for maximum security.",
+        "infra_title": "Multi-Stream Infrastructure",
+        "infra_subtitle": "A robust architecture capable of processing hundreds of cameras simultaneously with near-zero latency."
+    }
+}

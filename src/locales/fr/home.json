@@ -1,0 +1,33 @@
+{
+    "home": {
+        "badge": "Protection Intelligente v4.0",
+        "title": "AmanVision",
+        "subtitle": "La vigilance par l'IA, de la maison au chantier.",
+        "description": "Leader de la détection de chutes par vision artificielle. Sécurisez vos proches, vos employés et vos clients avec une précision inégalée.",
+        "pricing_btn": "Dès 1000 DZD / mois",
+        "demo_btn": "Démo IA Live",
+        "sectors_title_part1": "Un Seul Cœur IA,",
+        "sectors_title_part2": "Toutes les Chutes Détectées.",
+        "sectors_subtitle": "De l'intimité d'une chambre aux flux d'une gare internationale, AmanVision s'adapte pour sauver des vies.",
+        "sector1_title": "Santé & Seniors",
+        "sector1_desc": "Vigilance bienveillante en chambre et à domicile.",
+        "sector2_title": "BTP & Industrie",
+        "sector2_desc": "Détection des chutes de hauteur et protection des isolés.",
+        "sector3_title": "Gares & Malls",
+        "sector3_desc": "Sécurité des escalators et flux de passants 24/7.",
+        "proactive_title_part1": "Vigilance",
+        "proactive_title_part2": "Proactive",
+        "proactive_title_part3": "Industrielle & Urbaine.",
+        "proactive_desc_part1": "Sur un chantier ou dans un mall, une chute peut passer inaperçue. AmanVision alerte vos équipes ",
+        "proactive_desc_part2": "en moins d'une seconde",
+        "alert_delay_label": "Délai d'Alerte",
+        "precision_label": "Précision",
+        "engagement_title": "L'Engagement AmanVision",
+        "engagement1_title": "Zéro Bracelet",
+        "engagement1_desc": "Pas de capteur à porter. Une liberté totale pour les seniors et ouvriers.",
+        "engagement2_title": "CCTV Intégré",
+        "engagement2_desc": "S'adapte à vos caméras de sécurité existantes en quelques clics.",
+        "engagement3_title": "Smart Alerts",
+        "engagement3_desc": "Notifications intelligentes envoyées aux bons intervenants selon la zone."
+    }
+}

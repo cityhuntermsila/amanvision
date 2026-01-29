@@ -1,17 +1,20 @@
 
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Users, Shield, Target, CheckCircle2 } from 'lucide-react';
 
 const About: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
       <section className="py-10 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-10">
-            <h2 className="text-blue-600 font-black uppercase tracking-widest text-sm mb-4">Notre Mission</h2>
-            <h1 className="text-4xl lg:text-5xl font-black text-slate-900 mb-6">AmanVision : Préserver la dignité par l'IA.</h1>
+            <h2 className="text-blue-600 font-black uppercase tracking-widest text-sm mb-4">{t('about.mission_badge')}</h2>
+            <h1 className="text-4xl lg:text-5xl font-black text-slate-900 mb-6">{t('about.title')}</h1>
             <p className="text-lg text-slate-600 leading-relaxed">
-              AmanVision est née de la volonté d'offrir aux établissements de santé et aux familles un outil de surveillance bienveillant, non intrusif et extrêmement réactif.
+              {t('about.description')}
             </p>
           </div>
 
@@ -30,8 +33,8 @@ const About: React.FC = () => {
                   <Shield className="w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-black text-slate-900 mb-2">Sécurité sans Compromis</h3>
-                  <p className="text-slate-600 leading-relaxed">Nous traitons les données localement pour garantir une confidentialité totale des patients et résidents.</p>
+                  <h3 className="text-xl font-black text-slate-900 mb-2">{t('about.feat1_title')}</h3>
+                  <p className="text-slate-600 leading-relaxed">{t('about.feat1_desc')}</p>
                 </div>
               </div>
               <div className="flex gap-4">
@@ -39,8 +42,8 @@ const About: React.FC = () => {
                   <Target className="w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-black text-slate-900 mb-2">Précision Algorithmique</h3>
-                  <p className="text-slate-600 leading-relaxed">Nos modèles sont entraînés sur des milliers de scénarios de chutes pour minimiser les fausses alertes.</p>
+                  <h3 className="text-xl font-black text-slate-900 mb-2">{t('about.feat2_title')}</h3>
+                  <p className="text-slate-600 leading-relaxed">{t('about.feat2_desc')}</p>
                 </div>
               </div>
               <div className="flex gap-4">
@@ -48,8 +51,8 @@ const About: React.FC = () => {
                   <Users className="w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-black text-slate-900 mb-2">Ingénierie & Excellence</h3>
-                  <p className="text-slate-600 leading-relaxed">Dirigée par <strong>Imad Eddine Abdeslam</strong>, notre équipe d'ingénieurs passionnés assure une assistance rapide et personnalisée AmanVision.</p>
+                  <h3 className="text-xl font-black text-slate-900 mb-2">{t('about.feat3_title')}</h3>
+                  <p className="text-slate-600 leading-relaxed" dangerouslySetInnerHTML={{ __html: t('about.feat3_desc') }} />
                 </div>
               </div>
             </div>
@@ -59,9 +62,9 @@ const About: React.FC = () => {
 
       <section className="py-10 bg-blue-600 text-white">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <h2 className="text-2xl font-black mb-8">Nos Engagements AmanVision</h2>
+          <h2 className="text-2xl font-black mb-8">{t('about.engagement_title')}</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            {['Respect de l\'intimité', 'Zéro capteur portable', 'Alerte immédiate App/SMS'].map((item) => (
+            {[t('about.engagement1'), t('about.engagement2'), t('about.engagement3')].map((item) => (
               <div key={item} className="p-8 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 flex flex-col items-center">
                 <CheckCircle2 className="w-10 h-10 text-blue-200 mb-4" />
                 <span className="text-xl font-bold">{item}</span>

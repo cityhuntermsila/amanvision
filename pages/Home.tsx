@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import {
   ArrowRight,
   ChevronRight,
@@ -26,22 +27,24 @@ interface HomeProps {
 }
 
 const Home: React.FC<HomeProps> = ({ onNavigate }) => {
+  const { t } = useTranslation();
+
   const sectors = [
     {
-      title: "Santé & Seniors",
-      desc: "Vigilance bienveillante en chambre et à domicile.",
+      title: t('home.sector1_title'),
+      desc: t('home.sector1_desc'),
       img: "/images/images.jpg",
       icon: <HeartPulse className="w-8 h-8 text-rose-500" />
     },
     {
-      title: "BTP & Industrie",
-      desc: "Détection des chutes de hauteur et protection des isolés.",
+      title: t('home.sector2_title'),
+      desc: t('home.sector2_desc'),
       img: "/images/fall_btp2.jpg",
       icon: <HardHat className="w-8 h-8 text-blue-500" />
     },
     {
-      title: "Gares & Malls",
-      desc: "Sécurité des escalators et flux de passants 24/7.",
+      title: t('home.sector3_title'),
+      desc: t('home.sector3_desc'),
       img: "/images/fall_mall1.jpg",
       icon: <Building2 className="w-8 h-8 text-emerald-500" />
     }
@@ -57,41 +60,41 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
               <div className="space-y-4">
                 <div className="inline-flex items-center gap-2 px-3 py-1 bg-rose-50 rounded-full border border-rose-100 text-[#601344] text-[8px] font-black uppercase tracking-widest">
                   <ShieldAlert className="w-3 h-3" />
-                  Protection Intelligente v4.0
+                  {t('home.badge')}
                 </div>
                 <h1 className="text-4xl lg:text-7xl font-extrabold tracking-tighter text-[#601344] leading-[0.9]">
-                  AmanVision
+                  {t('home.title')}
                 </h1>
                 <p className="text-lg lg:text-2xl font-bold text-[#0077C8] italic tracking-tight leading-snug">
-                  La vigilance par l'IA, de la maison au chantier.
+                  {t('home.subtitle')}
                 </p>
               </div>
               <p className="text-lg lg:text-xl text-slate-600 max-w-lg font-medium leading-relaxed">
-                Leader de la détection de chutes par vision artificielle. Sécurisez vos proches, vos employés et vos clients avec une précision inégalée.
+                {t('home.description')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <button
                   onClick={() => onNavigate('pricing')}
                   className="px-8 py-3.5 bg-[#0077C8] text-white rounded-full font-extrabold text-base hover:bg-[#601344] transition-all flex items-center justify-center gap-2 shadow-xl active:scale-95"
                 >
-                  Dès 1000 DZD / mois
+                  {t('home.pricing_btn')}
                   <ChevronRight className="w-4 h-4" />
                 </button>
                 <button
                   onClick={() => onNavigate('demo')}
                   className="px-8 py-3.5 bg-white border-2 border-[#601344] text-[#601344] rounded-full font-extrabold text-base hover:bg-rose-50 transition-all flex items-center justify-center gap-2 active:scale-95"
                 >
-                  Démo IA Live
+                  {t('home.demo_btn')}
                 </button>
               </div>
             </div>
 
-            <div className="lg:w-1/2 mt-20 lg:mt-0 relative">
+            <div className="lg:w-2/5 mt-20 lg:mt-0 relative flex justify-center">
               <div className="absolute inset-0 bg-rose-900/5 blur-3xl rounded-full"></div>
               <img
                 src="/images/aman.jpg"
                 alt="AmanVision Fall Detection"
-                className="rounded-[3rem] shadow-2xl border-4 border-slate-50 relative z-10 group-hover:scale-105 transition-transform duration-1000"
+                className="w-full max-w-sm rounded-[3rem] shadow-2xl border-4 border-slate-50 relative z-10 group-hover:scale-105 transition-transform duration-1000"
               />
             </div>
           </div>
@@ -103,10 +106,10 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 lg:mb-14 space-y-4">
             <h2 className="text-[#601344] text-3xl lg:text-5xl font-extrabold tracking-tighter leading-none">
-              Un Seul Cœur IA, <br /><span className="text-[#0077C8]">Toutes les Chutes Détectées</span>.
+              {t('home.sectors_title_part1')} <br /><span className="text-[#0077C8]">{t('home.sectors_title_part2')}</span>.
             </h2>
             <p className="text-base lg:text-lg text-slate-500 font-medium max-w-4xl mx-auto leading-relaxed">
-              De l'intimité d'une chambre aux flux d'une gare internationale, AmanVision s'adapte pour sauver des vies.
+              {t('home.sectors_subtitle')}
             </p>
           </div>
 
@@ -139,20 +142,20 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
           <div className="lg:flex lg:items-center lg:gap-12">
             <div className="lg:w-1/2 space-y-8 text-center lg:text-left">
               <h2 className="text-[#601344] text-3xl lg:text-5xl font-extrabold tracking-tighter leading-tight">
-                Vigilance <span className="text-[#E35205]">Proactive</span> <br />Industrielle & Urbaine.
+                {t('home.proactive_title_part1')} <span className="text-[#E35205]">{t('home.proactive_title_part2')}</span> <br />{t('home.proactive_title_part3')}
               </h2>
               <p className="text-base lg:text-lg text-slate-600 leading-relaxed font-medium">
-                Sur un chantier ou dans un mall, une chute peut passer inaperçue. AmanVision alerte vos équipes <span className="text-[#601344] font-black underline decoration-[#0077C8] decoration-4 underline-offset-4">en moins d'une seconde</span>.
+                {t('home.proactive_desc_part1')}<span className="text-[#601344] font-black underline decoration-[#0077C8] decoration-4 underline-offset-4">{t('home.proactive_desc_part2')}</span>.
               </p>
 
               <div className="grid grid-cols-2 gap-4 lg:gap-6 pb-4">
                 <div className="p-4 lg:p-6 bg-slate-50 rounded-[2rem] border border-slate-100">
                   <div className="text-2xl lg:text-3xl font-black text-[#601344]">0.8s</div>
-                  <div className="text-[8px] font-black text-slate-400 uppercase tracking-widest mt-2">Délai d'Alerte</div>
+                  <div className="text-[8px] font-black text-slate-400 uppercase tracking-widest mt-2">{t('home.alert_delay_label')}</div>
                 </div>
                 <div className="p-4 lg:p-6 bg-slate-50 rounded-[2rem] border border-slate-100">
                   <div className="text-2xl lg:text-3xl font-black text-[#0077C8]">100%</div>
-                  <div className="text-[8px] font-black text-slate-400 uppercase tracking-widest mt-2">Précision</div>
+                  <div className="text-[8px] font-black text-slate-400 uppercase tracking-widest mt-2">{t('home.precision_label')}</div>
                 </div>
               </div>
             </div>
@@ -173,12 +176,12 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
       {/* Engagement Multi-pôles */}
       <section className="py-12 bg-[#F4F7F9]">
         <div className="max-w-7xl mx-auto px-4 text-center space-y-8">
-          <h2 className="heading-xl">L'Engagement AmanVision</h2>
+          <h2 className="heading-xl">{t('home.engagement_title')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { title: "Zéro Bracelet", desc: "Pas de capteur à porter. Une liberté totale pour les seniors et ouvriers.", icon: <Zap className="text-[#601344]" /> },
-              { title: "CCTV Intégré", desc: "S'adapte à vos caméras de sécurité existantes en quelques clics.", icon: <Network className="text-[#0077C8]" /> },
-              { title: "Smart Alerts", desc: "Notifications intelligentes envoyées aux bons intervenants selon la zone.", icon: <BellRing className="text-[#E35205]" /> }
+              { title: t('home.engagement1_title'), desc: t('home.engagement1_desc'), icon: <Zap className="text-[#601344]" /> },
+              { title: t('home.engagement2_title'), desc: t('home.engagement2_desc'), icon: <Network className="text-[#0077C8]" /> },
+              { title: t('home.engagement3_title'), desc: t('home.engagement3_desc'), icon: <BellRing className="text-[#E35205]" /> }
             ].map((item, i) => (
               <div key={i} className="bg-white p-8 lg:p-10 rounded-[2.5rem] shadow-medical space-y-4 border border-white hover:border-rose-100 transition-all mx-auto w-full max-w-sm lg:max-w-none">
                 <div className="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center mx-auto shadow-sm">

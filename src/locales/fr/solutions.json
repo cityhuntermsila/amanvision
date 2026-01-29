@@ -1,0 +1,26 @@
+{
+    "solutions_page": {
+        "intro_text": "AmanVision déploie la puissance de l'IA pour sécuriser les environnements là où la présence humaine ne suffit plus. De l'intimité d'un EHPAD au tumulte d'une gare, nous veillons sur chaque chute.",
+        "intro_title": "Solutions Fall-Detection & IA Multi-Secteurs.",
+        "process_title": "Notre Processus de Détection",
+        "smart_gare_title": "Smart Gare & Smart Mall.",
+        "smart_gare_desc": "Dans les ERP (Établissements Recevant du Public), une chute peut entraîner des blessures graves et des mouvements de panique. AmanVision détecte les incidents dans les zones critiques :",
+        "smart_gare_feat1": "Escalators et tapis roulants",
+        "smart_gare_feat2": "Halls de transit et zones de stockage",
+        "smart_gare_feat3": "Périmètres de sécurité interdits",
+        "smart_gare_btn": "Demander un Audit ERP",
+        "tech_stack_badge": "Certifiée",
+        "tech_stack_title": "Stack Technologique",
+        "tech_stack_desc": "AmanVision s'appuie sur les leaders mondiaux du hardware pour garantir une puissance de calcul stable et sécurisée.",
+        "rigueur_title_part1": "Entraîné pour la",
+        "rigueur_title_part2": "Rigueur",
+        "rigueur_feat1_title": "Analyse Posturale",
+        "rigueur_feat1_desc": "Extraction instantanée des points clés du corps pour identifier les anomalies biomécaniques.",
+        "rigueur_feat2_title": "Reconnaissance Anonyme",
+        "rigueur_feat2_desc": "Traitement des formes et patterns sans capturer l'identité visuelle, conforme RGPD par design.",
+        "rigueur_feat3_title": "Zero-Storage",
+        "rigueur_feat3_desc": "Flux analysés en mémoire vive et immédiatement purgés après détection pour une sécurité maximale.",
+        "infra_title": "Infrastructure Multi-Flux",
+        "infra_subtitle": "Une architecture robuste capable de traiter des centaines de caméras en simultané avec une latence quasi-nulle."
+    }
+}

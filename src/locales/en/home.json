@@ -1,0 +1,33 @@
+{
+    "home": {
+        "badge": "Smart Protection v4.0",
+        "title": "AmanVision",
+        "subtitle": "AI vigilance, from home to construction site.",
+        "description": "Leader in fall detection by computer vision. Secure your loved ones, your employees, and your customers with unmatched precision.",
+        "pricing_btn": "From 1000 DZD / month",
+        "demo_btn": "Live AI Demo",
+        "sectors_title_part1": "A Single AI Heart,",
+        "sectors_title_part2": "All Falls Detected.",
+        "sectors_subtitle": "From the privacy of a bedroom to the flows of an international station, AmanVision adapts to save lives.",
+        "sector1_title": "Health & Seniors",
+        "sector1_desc": "Benevolent vigilance in room and at home.",
+        "sector2_title": "Construction & Industry",
+        "sector2_desc": "Detection of falls from height and protection of lone workers.",
+        "sector3_title": "Stations & Malls",
+        "sector3_desc": "Escalator security and 24/7 passenger flows.",
+        "proactive_title_part1": "Proactive",
+        "proactive_title_part2": "Vigilance",
+        "proactive_title_part3": "Industrial & Urban.",
+        "proactive_desc_part1": "On a construction site or in a mall, a fall can go unnoticed. AmanVision alerts your teams ",
+        "proactive_desc_part2": "in less than a second",
+        "alert_delay_label": "Alert Delay",
+        "precision_label": "Precision",
+        "engagement_title": "The AmanVision Commitment",
+        "engagement1_title": "Zero Wearables",
+        "engagement1_desc": "No sensors to wear. Total freedom for seniors and workers.",
+        "engagement2_title": "Integrated CCTV",
+        "engagement2_desc": "Adapts to your existing security cameras in a few clicks.",
+        "engagement3_title": "Smart Alerts",
+        "engagement3_desc": "Smart notifications sent to the right responders based on the zone."
+    }
+}

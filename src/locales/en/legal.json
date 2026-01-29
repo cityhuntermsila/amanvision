@@ -1,0 +1,28 @@
+{
+    "privacy_page": {
+        "badge": "Privacy",
+        "title": "Privacy Policy",
+        "subtitle": "Your privacy is the pillar of our AmanVision vigilance.",
+        "section1_title": "1. Data Collection",
+        "section1_desc": "AmanVision only collects the data strictly necessary for the operation of the vigilance service. Video streams are analyzed in real time and are never stored on our servers without explicit activation by the administrator.",
+        "section2_title": "2. AI Processing",
+        "section2_desc": "Our artificial intelligence processes images locally via secure gateways (Edge Computing) as much as possible. When cloud analysis is required, images are anonymized and encrypted end-to-end.",
+        "transparency_title": "Transparency Commitment",
+        "transparency_desc": "In accordance with data protection legislation, AmanVision is committed to maintaining the integrity of its secure and encrypted storage infrastructures.",
+        "section3_title": "3. Your Rights",
+        "section3_desc": "You have the right to access, rectify and delete your data. For any request, contact our Data Protection Officer at privacy@amanvision.com."
+    },
+    "terms_page": {
+        "badge": "Terms",
+        "title": "General Terms & Conditions",
+        "subtitle": "Legal framework for AmanVision services.",
+        "preamble_title": "Preamble",
+        "preamble_desc": "These terms govern the use of the AmanVision SaaS software and associated services. By accessing our platform, you fully accept these terms.",
+        "responsibility_title": "Liability",
+        "responsibility_desc": "AmanVision is a vigilance support tool. Although our accuracy rate is extremely high, the system in no way replaces the mandatory human presence. AmanVision cannot be held responsible in case of human intervention delay.",
+        "billing_title": "Subscription & Payment",
+        "billing_desc": "Any month started is due. Non-payment results in the automatic suspension of the AmanVision vigilance feed after 48 hours notice.",
+        "modifications_title": "Modification of Terms",
+        "modifications_desc": "AmanVision reserves the right to modify these terms at any time to adapt to technological developments. Users will be informed by email 15 days before entry into force."
+    }
+}

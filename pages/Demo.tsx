@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import AIAnalyzer from '../components/AIAnalyzer';
 import { PlanType } from '../types';
 import { ShieldAlert, Zap, Cpu } from 'lucide-react';
@@ -10,17 +11,18 @@ interface DemoProps {
 }
 
 const Demo: React.FC<DemoProps> = ({ currentPlan, onNavigate }) => {
+  const { t } = useTranslation();
+
   return (
     <div className="animate-in fade-in duration-500 min-h-screen bg-[#FDF8FA]">
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="text-center mb-10 space-y-4">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#601344] text-white text-[8px] font-black uppercase tracking-[0.3em] shadow-xl">
             <Cpu className="w-3 h-3 text-rose-400" />
-            <span>Moteur Neuronal Aman v4.0</span>
+            <span>{t('demo_page.engine_badge')}</span>
           </div>
-          <h1 className="heading-xl">Expérimentez l'<span className="text-[#0077C8]">Inférence</span>.</h1>
           <p className="text-2xl text-slate-500 max-w-2xl mx-auto font-medium leading-relaxed">
-            Testez la puissance de notre IA sur vos propres images. Notre moteur détecte instantanément les risques et les chutes.
+            {t('demo_page.subtitle')}
           </p>
         </div>
 
@@ -30,9 +32,9 @@ const Demo: React.FC<DemoProps> = ({ currentPlan, onNavigate }) => {
 
         <div className="mt-12 grid md:grid-cols-3 gap-8">
           {[
-            { step: "01", title: "Capture Photo", desc: "Importez une image de situation réelle." },
-            { step: "02", title: "Analyse IA", desc: "L'IA identifie les squelettes et postures." },
-            { step: "03", title: "Verdict Médical", desc: "Recevez une alerte et un conseil immédiat." }
+            { step: "01", title: t('demo_page.step1_title'), desc: t('demo_page.step1_desc') },
+            { step: "02", title: t('demo_page.step2_title'), desc: t('demo_page.step2_desc') },
+            { step: "03", title: t('demo_page.step3_title'), desc: t('demo_page.step3_desc') }
           ].map((item, idx) => (
             <div key={idx} className="p-8 bg-white rounded-[2.5rem] border border-rose-50 shadow-sm flex flex-col items-center text-center space-y-4">
               <div className="w-12 h-12 bg-[#601344] rounded-2xl flex items-center justify-center text-white font-black text-lg shadow-lg">
@@ -50,9 +52,9 @@ const Demo: React.FC<DemoProps> = ({ currentPlan, onNavigate }) => {
               <ShieldAlert className="w-6 h-6 text-white" />
             </div>
             <div>
-              <h5 className="font-black text-[#601344] uppercase tracking-widest text-base mb-1">Note de Démonstration</h5>
+              <h5 className="font-black text-[#601344] uppercase tracking-widest text-base mb-1">{t('demo_page.note_title')}</h5>
               <p className="text-sm text-[#601344]/70 font-medium leading-relaxed">
-                Cette démo utilise des images fixes. Pour une protection temps réel 24/7 avec flux vidéo continu, contactez-nous pour une installation Pro.
+                {t('demo_page.note_desc')}
               </p>
             </div>
           </div>
@@ -60,7 +62,7 @@ const Demo: React.FC<DemoProps> = ({ currentPlan, onNavigate }) => {
             onClick={() => onNavigate('pricing')}
             className="whitespace-nowrap bg-[#0077C8] text-white px-8 py-4 rounded-full font-extrabold text-base hover:bg-[#601344] transition-all shadow-xl active:scale-95"
           >
-            Découvrir l'offre Pro
+            {t('demo_page.pro_btn')}
           </button>
         </div>
       </div>

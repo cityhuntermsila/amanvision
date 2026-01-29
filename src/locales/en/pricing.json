@@ -1,0 +1,15 @@
+{
+    "pricing_page": {
+        "badge": "Subscription & Commitment",
+        "title_part1": "Serenity",
+        "title_part2": "without compromise",
+        "subtitle": "Choose the package that fits your protection needs.",
+        "popular_badge": "The Families' Choice",
+        "active_plan": "Active Plan",
+        "enterprise_title_part1": "Enterprise",
+        "enterprise_title_part2": "Solutions",
+        "enterprise_subtitle": "Personalized security audit for hospitals and industries.",
+        "audit_btn": "Request an Audit",
+        "month": "/month"
+    }
+}

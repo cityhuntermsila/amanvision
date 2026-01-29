@@ -1,0 +1,17 @@
+{
+    "demo_page": {
+        "engine_badge": "Moteur Neuronal Aman v4.0",
+        "title_part1": "Expérimentez l'",
+        "title_part2": "Inférence",
+        "subtitle": "Testez la puissance de notre IA sur vos propres images. Notre moteur détecte instantanément les risques et les chutes.",
+        "step1_title": "Capture Photo",
+        "step1_desc": "Importez une image de situation réelle.",
+        "step2_title": "Analyse IA",
+        "step2_desc": "L'IA identifie les squelettes et postures.",
+        "step3_title": "Verdict Médical",
+        "step3_desc": "Recevez une alerte et un conseil immédiat.",
+        "note_title": "Note de Démonstration",
+        "note_desc": "Cette démo utilise des images fixes. Pour une protection temps réel 24/7 avec flux vidéo continu, contactez-nous pour une installation Pro.",
+        "pro_btn": "Découvrir l'offre Pro"
+    }
+}

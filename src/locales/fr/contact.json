@@ -1,0 +1,25 @@
+{
+    "contact_page": {
+        "badge": "Consultation Experte",
+        "title_part1": "Sécurisons vos",
+        "title_part2": "Résidents",
+        "subtitle": "Nos experts vous conseillent sur le déploiement de la vigilance intelligente dans votre établissement.",
+        "phone": "Téléphone",
+        "email": "Email",
+        "headquarters": "Siège",
+        "country": "Algérie",
+        "form_title": "Audit Fall-Prevention",
+        "label_name": "Nom du Responsable",
+        "placeholder_name": "M. Benali",
+        "label_email": "Email Etablissement",
+        "placeholder_email": "direction@clinique.dz",
+        "label_type": "Type d'Etablissement",
+        "option1": "Hôpital / Clinique Publique",
+        "option2": "Établissement de Santé Privé",
+        "option3": "EHPAD / Maison de Retraite",
+        "option4": "Résidence Senior / Maintien à domicile",
+        "label_project": "Votre Projet",
+        "placeholder_project": "Nombre de lits à équiper, contraintes spécifiques...",
+        "submit_btn": "Demander une Étude"
+    }
+}

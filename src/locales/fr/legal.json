@@ -1,0 +1,28 @@
+{
+    "privacy_page": {
+        "badge": "Vie Privée",
+        "title": "Politique de Confidentialité",
+        "subtitle": "Votre vie privée est le pilier de notre vigilance AmanVision.",
+        "section1_title": "1. Collecte des Données",
+        "section1_desc": "AmanVision ne collecte que les données strictement nécessaires au fonctionnement du service de vigilance. Les flux vidéo sont analysés en temps réel et ne sont jamais stockés sur nos serveurs sans une activation explicite par l'administrateur.",
+        "section2_title": "2. Traitement par IA",
+        "section2_desc": "Notre intelligence artificielle traite les images localement via des passerelles sécurisées (Edge Computing) autant que possible. Lorsqu'une analyse cloud est requise, les images sont anonymisées et cryptées de bout en bout.",
+        "transparency_title": "Engagement de Transparence",
+        "transparency_desc": "Conformément à la législation sur la protection des données, AmanVision s'engage à maintenir l'intégralité de ses infrastructures de stockage sécurisées et cryptées.",
+        "section3_title": "3. Vos Droits",
+        "section3_desc": "Vous disposez d'un droit d'accès, de rectification et de suppression de vos données. Pour toute demande, contactez notre Délégué à la Protection des Données à privacy@amanvision.com."
+    },
+    "terms_page": {
+        "badge": "Conditions",
+        "title": "Conditions Générales",
+        "subtitle": "Cadre légal des services AmanVision.",
+        "preamble_title": "Préambule",
+        "preamble_desc": "Les présentes conditions régissent l'utilisation du logiciel SaaS AmanVision et des services associés. En accédant à notre plateforme, vous acceptez pleinement ces termes.",
+        "responsibility_title": "Responsabilité",
+        "responsibility_desc": "AmanVision est un outil d'aide à la vigilance. Bien que notre taux de précision soit extrêmement élevé, le système ne remplace en aucun cas la présence humaine obligatoire. AmanVision ne pourra être tenu responsable en cas de retard d'intervention humaine.",
+        "billing_title": "Abonnement & Paiement",
+        "billing_desc": "Tout mois entamé est dû. Le non-paiement entraîne la suspension automatique du flux de vigilance AmanVision après un préavis de 48 heures.",
+        "modifications_title": "Modification des Termes",
+        "modifications_desc": "AmanVision se réserve le droit de modifier ces conditions à tout moment pour s'adapter aux évolutions technologiques. Les utilisateurs seront informés par email 15 jours avant l'entrée en vigueur."
+    }
+}

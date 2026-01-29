@@ -1,5 +1,6 @@
 
 import React, { useState, useRef, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Camera, Upload, AlertCircle, CheckCircle, Loader2, ShieldAlert, Zap, Cpu, Scan } from 'lucide-react';
 import { analyzeRiskFromImage } from '../services/geminiService';
 import { AnalysisResult, PlanType } from '../types';
@@ -10,18 +11,19 @@ interface AIAnalyzerProps {
 }
 
 const AIAnalyzer: React.FC<AIAnalyzerProps> = ({ currentPlan, onNavigate }) => {
+  const { t, i18n } = useTranslation();
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<AnalysisResult | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
-  
+
   const videoRef = useRef<HTMLVideoElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [isStreaming, setIsStreaming] = useState(false);
 
   const startCamera = async () => {
     if (currentPlan === 'free') {
-      setError("Le flux vidéo Advanced est requis pour l'analyse en temps réel.");
+      setError(t('analyzer.error_advanced'));
       return;
     }
     try {
@@ -32,7 +34,7 @@ const AIAnalyzer: React.FC<AIAnalyzerProps> = ({ currentPlan, onNavigate }) => {
         setIsStreaming(true);
       }
     } catch (err) {
-      setError("Accès caméra refusé. Vérifiez vos paramètres système.");
+      setError(t('analyzer.error_camera'));
     }
   };
 
@@ -56,12 +58,12 @@ const AIAnalyzer: React.FC<AIAnalyzerProps> = ({ currentPlan, onNavigate }) => {
     reader.onloadend = async () => {
       const base64 = (reader.result as string).split(',')[1];
       setPreviewUrl(reader.result as string);
-      
+
       try {
-        const analysis = await analyzeRiskFromImage(base64, file.type);
+        const analysis = await analyzeRiskFromImage(base64, file.type, i18n.language);
         setResult(analysis);
       } catch (err) {
-        setError("Dysfonctionnement de l'analyse IA. Relancez la capture.");
+        setError(t('analyzer.error_analysis'));
       } finally {
         setLoading(false);
       }
@@ -71,25 +73,25 @@ const AIAnalyzer: React.FC<AIAnalyzerProps> = ({ currentPlan, onNavigate }) => {
 
   const captureAndAnalyze = async () => {
     if (!videoRef.current || !canvasRef.current) return;
-    
+
     setLoading(true);
     setError(null);
-    
+
     const context = canvasRef.current.getContext('2d');
     if (context) {
       canvasRef.current.width = videoRef.current.videoWidth;
       canvasRef.current.height = videoRef.current.videoHeight;
       context.drawImage(videoRef.current, 0, 0);
-      
+
       const dataUrl = canvasRef.current.toDataURL('image/jpeg');
       setPreviewUrl(dataUrl);
       const base64 = dataUrl.split(',')[1];
-      
+
       try {
-        const analysis = await analyzeRiskFromImage(base64, 'image/jpeg');
+        const analysis = await analyzeRiskFromImage(base64, 'image/jpeg', i18n.language);
         setResult(analysis);
       } catch (err) {
-        setError("Erreur fatale du moteur neuronal.");
+        setError(t('analyzer.error_fatal'));
       } finally {
         setLoading(false);
       }
@@ -104,24 +106,23 @@ const AIAnalyzer: React.FC<AIAnalyzerProps> = ({ currentPlan, onNavigate }) => {
             <label className="flex-1 flex items-center justify-center gap-4 px-6 lg:px-10 py-6 bg-emerald-950 hover:bg-emerald-800 text-lime-400 font-black rounded-[2.5rem] cursor-pointer transition-all shadow-2xl shadow-emerald-950/20 active:scale-95 group">
               <Upload className="w-8 h-8 group-hover:-translate-y-1 transition-transform" />
               <div className="text-left">
-                <span className="block text-base lg:text-lg leading-tight">Charger une photo</span>
-                <span className="block text-[8px] lg:text-[10px] font-bold text-lime-400/50 uppercase tracking-[0.2em]">Secteur Multi-modal</span>
+                <span className="block text-base lg:text-lg leading-tight">{t('analyzer.load_photo')}</span>
+                <span className="block text-[8px] lg:text-[10px] font-bold text-lime-400/50 uppercase tracking-[0.2em]">{t('analyzer.sector_multimodal')}</span>
               </div>
               <input type="file" className="hidden" accept="image/*" onChange={handleFileUpload} />
             </label>
 
-            <button 
+            <button
               onClick={isStreaming ? captureAndAnalyze : startCamera}
-              className={`flex-1 flex items-center justify-center gap-4 px-6 lg:px-10 py-6 font-black rounded-[2.5rem] transition-all border-4 text-left active:scale-95 ${
-                isStreaming 
-                ? 'bg-rose-600 hover:bg-rose-700 text-white border-rose-500 shadow-2xl shadow-rose-600/20' 
-                : 'bg-white border-emerald-950 text-emerald-950 hover:bg-slate-50'
-              }`}
+              className={`flex-1 flex items-center justify-center gap-4 px-6 lg:px-10 py-6 font-black rounded-[2.5rem] transition-all border-4 text-left active:scale-95 ${isStreaming
+                  ? 'bg-rose-600 hover:bg-rose-700 text-white border-rose-500 shadow-2xl shadow-rose-600/20'
+                  : 'bg-white border-emerald-950 text-emerald-950 hover:bg-slate-50'
+                }`}
             >
               <Camera className={`w-8 h-8 ${isStreaming ? 'animate-pulse' : ''}`} />
               <div>
-                <span className="block text-base lg:text-lg leading-tight">{isStreaming ? "Capturer" : "Vantage Pro Live"}</span>
-                <span className="block text-[8px] lg:text-[10px] font-bold opacity-50 uppercase tracking-[0.2em]">Flux temps réel</span>
+                <span className="block text-base lg:text-lg leading-tight">{isStreaming ? t('analyzer.capture_btn') : t('analyzer.live_btn')}</span>
+                <span className="block text-[8px] lg:text-[10px] font-bold opacity-50 uppercase tracking-[0.2em]">{t('analyzer.realtime_flux')}</span>
               </div>
             </button>
           </div>
@@ -147,7 +148,7 @@ const AIAnalyzer: React.FC<AIAnalyzerProps> = ({ currentPlan, onNavigate }) => {
             ) : (
               <div className="flex flex-col items-center justify-center h-full text-emerald-100/10 gap-8">
                 <Scan className="w-24 lg:w-32 h-24 lg:h-32 animate-pulse" />
-                <p className="font-black uppercase tracking-[0.3em] lg:tracking-[0.5em] text-[10px] lg:text-sm text-center px-10 italic leading-relaxed opacity-40">Signal optique en attente d'acquisition</p>
+                <p className="font-black uppercase tracking-[0.3em] lg:tracking-[0.5em] text-[10px] lg:text-sm text-center px-10 italic leading-relaxed opacity-40">{t('analyzer.waiting_signal')}</p>
               </div>
             )}
 
@@ -161,12 +162,12 @@ const AIAnalyzer: React.FC<AIAnalyzerProps> = ({ currentPlan, onNavigate }) => {
                     </div>
                   </div>
                   <div className="text-center space-y-2">
-                    <p className="font-black text-2xl lg:text-3xl tracking-tighter uppercase italic text-white">Scrutin Neuronal...</p>
+                    <p className="font-black text-2xl lg:text-3xl tracking-tighter uppercase italic text-white">{t('analyzer.scanning')}</p>
                     <div className="flex items-center gap-2 justify-center">
                       <div className="h-1 w-10 lg:w-12 bg-lime-400/20 rounded-full overflow-hidden">
                         <div className="h-full bg-lime-400 animate-progress"></div>
                       </div>
-                      <p className="text-[8px] lg:text-[10px] font-black text-lime-400/50 uppercase tracking-[0.4em]">Engine v4.0.1</p>
+                      <p className="text-[8px] lg:text-[10px] font-black text-lime-400/50 uppercase tracking-[0.4em]">{t('analyzer.engine_version')}</p>
                     </div>
                   </div>
                 </div>
@@ -175,7 +176,7 @@ const AIAnalyzer: React.FC<AIAnalyzerProps> = ({ currentPlan, onNavigate }) => {
             <canvas ref={canvasRef} className="hidden" />
           </div>
           {isStreaming && (
-            <button onClick={stopCamera} className="w-full text-[10px] font-black text-rose-500 uppercase tracking-[0.4em] text-center hover:text-rose-600 transition-colors py-4 border border-rose-500/20 rounded-full bg-rose-500/5 mt-4">Terminer la session Vantage Pro</button>
+            <button onClick={stopCamera} className="w-full text-[10px] font-black text-rose-500 uppercase tracking-[0.4em] text-center hover:text-rose-600 transition-colors py-4 border border-rose-500/20 rounded-full bg-rose-500/5 mt-4">{t('analyzer.stop_session')}</button>
           )}
         </div>
 
@@ -186,11 +187,11 @@ const AIAnalyzer: React.FC<AIAnalyzerProps> = ({ currentPlan, onNavigate }) => {
                 <Cpu className="w-6 lg:w-8 h-6 lg:h-8 text-lime-400" />
               </div>
               <div>
-                <h3 className="text-xl lg:text-2xl font-black text-slate-900 uppercase tracking-tighter">Inférence IA</h3>
-                <span className="text-[8px] lg:text-[10px] font-black text-emerald-700 uppercase tracking-widest bg-emerald-50 px-2 py-0.5 rounded">Vérification instantanée</span>
+                <h3 className="text-xl lg:text-2xl font-black text-slate-900 uppercase tracking-tighter">{t('analyzer.inference_title')}</h3>
+                <span className="text-[8px] lg:text-[10px] font-black text-emerald-700 uppercase tracking-widest bg-emerald-50 px-2 py-0.5 rounded">{t('analyzer.instant_check')}</span>
               </div>
             </div>
-            
+
             {error && (
               <div className="p-6 lg:p-8 bg-rose-50 border-2 border-rose-100 rounded-[2rem] space-y-6 text-rose-800 animate-in zoom-in duration-500">
                 <div className="flex items-start gap-4">
@@ -198,11 +199,11 @@ const AIAnalyzer: React.FC<AIAnalyzerProps> = ({ currentPlan, onNavigate }) => {
                   <p className="font-black text-base lg:text-lg leading-tight">{error}</p>
                 </div>
                 {currentPlan === 'free' && onNavigate && (
-                  <button 
+                  <button
                     onClick={() => onNavigate('pricing')}
                     className="w-full py-4 bg-rose-600 text-white rounded-2xl font-black text-xs uppercase tracking-widest hover:bg-rose-700 transition-all shadow-xl shadow-rose-200"
                   >
-                    Mettre à jour mon forfait
+                    {t('analyzer.update_plan')}
                   </button>
                 )}
               </div>
@@ -217,8 +218,8 @@ const AIAnalyzer: React.FC<AIAnalyzerProps> = ({ currentPlan, onNavigate }) => {
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <p className="font-black text-lg lg:text-xl italic tracking-[0.2em] uppercase opacity-40">Prêt pour l'analyse</p>
-                  <p className="text-[8px] lg:text-[10px] font-bold text-slate-400 uppercase tracking-widest">Connecté au cloud AmanVision</p>
+                  <p className="font-black text-lg lg:text-xl italic tracking-[0.2em] uppercase opacity-40">{t('analyzer.ready')}</p>
+                  <p className="text-[8px] lg:text-[10px] font-bold text-slate-400 uppercase tracking-widest">{t('analyzer.connected')}</p>
                 </div>
               </div>
             )}
@@ -227,23 +228,22 @@ const AIAnalyzer: React.FC<AIAnalyzerProps> = ({ currentPlan, onNavigate }) => {
               <div className="space-y-10 animate-in fade-in slide-in-from-bottom-8 duration-700">
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-slate-50 p-5 lg:p-6 rounded-[2rem] border border-slate-100 flex flex-col justify-center">
-                    <span className="text-[8px] lg:text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Risque</span>
-                    <div className={`text-xl lg:text-2xl font-black uppercase tracking-tighter ${
-                      result.riskLevel === 'high' ? 'text-rose-600' :
-                      result.riskLevel === 'medium' ? 'text-amber-500' :
-                      'text-emerald-700'
-                    }`}>
-                      {result.riskLevel}
+                    <span className="text-[8px] lg:text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">{t('analyzer.risk_label')}</span>
+                    <div className={`text-xl lg:text-2xl font-black uppercase tracking-tighter ${result.riskLevel === 'high' ? 'text-rose-600' :
+                        result.riskLevel === 'medium' ? 'text-amber-500' :
+                          'text-emerald-700'
+                      }`}>
+                      {t(`analyzer.risk_${result.riskLevel}`)}
                     </div>
                   </div>
                   <div className="bg-slate-50 p-5 lg:p-6 rounded-[2rem] border border-slate-100 flex flex-col justify-center">
-                    <span className="text-[8px] lg:text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Fiabilité</span>
+                    <span className="text-[8px] lg:text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">{t('analyzer.reliability_label')}</span>
                     <div className="text-xl lg:text-2xl font-black text-emerald-900 tracking-tighter">99.4%</div>
                   </div>
                 </div>
 
                 <div className="space-y-6">
-                  <p className="font-black text-slate-800 uppercase tracking-widest text-[8px] lg:text-[10px] ml-1">Éléments visuels détectés</p>
+                  <p className="font-black text-slate-800 uppercase tracking-widest text-[8px] lg:text-[10px] ml-1">{t('analyzer.elements_label')}</p>
                   <div className="flex flex-wrap gap-2">
                     {result.detectedElements.map((el, idx) => (
                       <span key={idx} className="bg-white border-2 border-slate-100 px-4 py-2 rounded-2xl text-[12px] lg:text-sm font-black text-slate-700 shadow-sm flex items-center gap-3">
@@ -259,7 +259,7 @@ const AIAnalyzer: React.FC<AIAnalyzerProps> = ({ currentPlan, onNavigate }) => {
                   <div className="relative z-10">
                     <div className="flex items-center gap-2 mb-6">
                       <Zap className="w-4 h-4 text-lime-400 fill-lime-400" />
-                      <p className="text-lime-400 text-[8px] lg:text-[10px] font-black uppercase tracking-[0.3em]">Conseil de Sécurité</p>
+                      <p className="text-lime-400 text-[8px] lg:text-[10px] font-black uppercase tracking-[0.3em]">{t('analyzer.security_advice')}</p>
                     </div>
                     <p className="text-xl lg:text-2xl font-black italic leading-tight text-white">"{result.recommendation}"</p>
                   </div>
@@ -270,7 +270,7 @@ const AIAnalyzer: React.FC<AIAnalyzerProps> = ({ currentPlan, onNavigate }) => {
                     <div className="w-12 lg:w-16 h-12 lg:h-16 bg-white/20 rounded-full flex items-center justify-center shrink-0">
                       <ShieldAlert className="w-8 lg:w-10 h-8 lg:h-10" />
                     </div>
-                    <span className="text-2xl lg:text-3xl font-black uppercase tracking-tighter italic leading-none text-center">ALERTE CRITIQUE</span>
+                    <span className="text-2xl lg:text-3xl font-black uppercase tracking-tighter italic leading-none text-center">{t('analyzer.critical_alert')}</span>
                   </div>
                 )}
               </div>

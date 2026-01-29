@@ -1,0 +1,26 @@
+{
+    "about": {
+        "mission_badge": "Notre Mission",
+        "title": "AmanVision : Préserver la dignité par l'IA.",
+        "description": "AmanVision est née de la volonté d'offrir aux établissements de santé et aux familles un outil de surveillance bienveillant, non intrusif et extrêmement réactif.",
+        "feat1_title": "Sécurité sans Compromis",
+        "feat1_desc": "Nous traitons les données localement pour garantir une confidentialité totale des patients et résidents.",
+        "feat2_title": "Précision Algorithmique",
+        "feat2_desc": "Nos modèles sont entraînés sur des milliers de scénarios de chutes pour minimiser les fausses alertes.",
+        "feat3_title": "Ingénierie & Excellence",
+        "feat3_desc": "Dirigée par <strong>Imad Eddine Abdeslam</strong>, notre équipe d'ingénieurs passionnés assure une assistance rapide et personnalisée AmanVision.",
+        "engagement_title": "Nos Engagements AmanVision",
+        "engagement1": "Respect de l'intimité",
+        "engagement2": "Zéro capteur portable",
+        "engagement3": "Alerte immédiate App/SMS"
+    },
+    "faq": {
+        "badge": "Centre de Support",
+        "title_part1": "Questions",
+        "title_part2": "Fréquentes",
+        "subtitle": "Tout ce qu'il faut savoir sur la protection par vision artificielle.",
+        "cta_title": "Encore des interrogations ?",
+        "cta_desc": "Notre équipe technique est disponible pour une consultation personnalisée.",
+        "cta_btn": "Contacter un expert Aman"
+    }
+}

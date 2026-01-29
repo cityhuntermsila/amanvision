@@ -1,0 +1,17 @@
+{
+    "demo_page": {
+        "engine_badge": "Aman Neural Engine v4.0",
+        "title_part1": "Experience the",
+        "title_part2": "Inference",
+        "subtitle": "Test the power of our AI on your own images. Our engine instantly detects risks and falls.",
+        "step1_title": "Photo Capture",
+        "step1_desc": "Import an image of a real situation.",
+        "step2_title": "AI Analysis",
+        "step2_desc": "The AI identifies skeletons and postures.",
+        "step3_title": "Medical Verdict",
+        "step3_desc": "Receive an alert and immediate advice.",
+        "note_title": "Demonstration Note",
+        "note_desc": "This demo uses fixed images. For 24/7 real-time protection with continuous video feed, contact us for a Pro installation.",
+        "pro_btn": "Discover the Pro Offer"
+    }
+}

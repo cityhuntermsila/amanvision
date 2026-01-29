@@ -1,0 +1,26 @@
+{
+    "about": {
+        "mission_badge": "Our Mission",
+        "title": "AmanVision: Preserving dignity through AI.",
+        "description": "AmanVision was born from the desire to offer healthcare facilities and families a benevolent, non-intrusive, and extremely responsive monitoring tool.",
+        "feat1_title": "Compromise-Free Security",
+        "feat1_desc": "We process data locally to guarantee total privacy for patients and residents.",
+        "feat2_title": "Algorithmic Precision",
+        "feat2_desc": "Our models are trained on thousands of fall scenarios to minimize false alarms.",
+        "feat3_title": "Engineering & Excellence",
+        "feat3_desc": "Led by <strong>Imad Eddine Abdeslam</strong>, our team of passionate engineers ensures fast and personalized AmanVision assistance.",
+        "engagement_title": "Our AmanVision Commitments",
+        "engagement1": "Privacy respect",
+        "engagement2": "Zero wearable sensors",
+        "engagement3": "Immediate App/SMS alert"
+    },
+    "faq": {
+        "badge": "Support Center",
+        "title_part1": "Frequently Asked",
+        "title_part2": "Questions",
+        "subtitle": "Everything you need to know about protection through computer vision.",
+        "cta_title": "Still have questions?",
+        "cta_desc": "Our technical team is available for a personalized consultation.",
+        "cta_btn": "Contact an Aman expert"
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "contact_page": {
+        "badge": "Expert Consultation",
+        "title_part1": "Securing your",
+        "title_part2": "Residents",
+        "subtitle": "Our experts advise you on the deployment of smart vigilance in your facility.",
+        "phone": "Phone",
+        "email": "Email",
+        "headquarters": "Headquarters",
+        "country": "Algeria",
+        "form_title": "Fall-Prevention Audit",
+        "label_name": "Manager Name",
+        "placeholder_name": "Mr. Benali",
+        "label_email": "Facility Email",
+        "placeholder_email": "management@clinic.dz",
+        "label_type": "Facility Type",
+        "option1": "Hospital / Public Clinic",
+        "option2": "Private Healthcare Facility",
+        "option3": "Nursing Home",
+        "option4": "Senior Residence / Home Care",
+        "label_project": "Your Project",
+        "placeholder_project": "Number of beds to equip, specific constraints...",
+        "submit_btn": "Request a Study"
+    }
+}
