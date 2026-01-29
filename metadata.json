@@ -1,0 +1,7 @@
+{
+  "name": "Copy of AmanVision - La sérénité par la vision artificielle",
+  "description": "Solution SaaS premium de détection de chutes et protection intelligente. Alliant l'IA de pointe et la bienveillance pour sécuriser seniors et travailleurs.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
